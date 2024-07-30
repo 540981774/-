@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">学习“网络安全法”</view>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500">
+    <block wx:for="{{images}}" wx:key="*this">
+      <swiper-item>
+        <image class="slide-image" src="{{item}}" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="theme">
+    <text class="theme-description">
+    随着信息技术的飞速发展，网络已经成为我们日常生活中不可或缺的一部分。然而，随之而来的网络安全问题也日益严峻。为了保护公民个人信息，维护国家安全和社会秩序，我国制定并实施了《网络安全法》。下面，让我们一起通过“学习视频”和“文字案例”来了解这部重要法律的核心内容和意义。
+    </text>
+  </view>
+  <view class="content">
+    <navigator url="/pages/videos/videos" class="nav-item">观看"网络安全"</navigator>
+    <navigator url="/pages/cases/cases" class="nav-item">"网络安全"案例</navigator>
+  </view>
+</view>

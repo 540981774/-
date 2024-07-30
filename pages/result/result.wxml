@@ -1,0 +1,22 @@
+<view class="page">
+  <view class='page__hd'>
+    <view class="page__title">
+      答题结束！您的得分为:
+    </view>
+    <view class='page-score'>
+      <text class="score-num">{{totalScore}}</text>
+      <text class="score-text">分</text>
+    </view>
+    <text class="score-remark">{{totalScore == 30 ? remark[0] : (totalScore >= 20 ? remark[1] : remark[2])}}</text>
+  </view>
+  
+  <view class='page__ft'>
+    <view class="wrong-view" wx:if="{{wrongList.length > 0}}">
+      <text>错误的题数：</text>
+      <text wx:for="{{wrongList}}" wx:key="*this">[{{item - 0 + 1}}]</text> 题
+    </view>
+    <view class="wrong-btns">
+      <button type="default" bindtap="toIndex" hover-class="other-button-hover" class="wrong-btn"> 返回首页 </button>
+    </view>
+  </view>
+</view>

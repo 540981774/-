@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">学习视频</view>
+  <video
+    class="video"
+    src="{{currentVideo.src}}"
+    controls="true"
+    autoplay="false"
+  ></video>
+  <view class="video-info">
+    <text class="video-title">{{currentVideo.title}}</text>
+    <text class="video-description">{{currentVideo.description}}</text>
+  </view>
+  <view class="video-list">
+    <view class="video-item" wx:for="{{videos}}" wx:key="*this" bindtap="playVideo" data-index="{{index}}">
+      <text class="video-item-title">{{item.title}}</text>
+    </view>
+  </view>
+</view>

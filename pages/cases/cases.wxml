@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="header">“网络安全”案例</view>
+  <view class="case-list">
+    <block wx:for="{{cases}}" wx:key="*this">
+      <view class="case-item">
+        <image class="case-image" src="{{item.image}}" mode="aspectFill"></image>
+        <view class="case-content">
+          <text class="case-title">{{item.title}}</text>
+          <text class="case-description">{{item.description}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

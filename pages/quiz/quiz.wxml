@@ -1,0 +1,30 @@
+<view class="page">
+  <view class='page__hd'>
+    <view class="page__title">
+      {{currentQuestionIndex + 1}}、{{questionList[currentQuestionIndex].question}}
+      {{questionList[currentQuestionIndex].type == 1 ? "【单选】" : "【多选】"}}
+      （{{questionList[currentQuestionIndex].scores}}分）
+    </view>
+  </view>
+  
+  <view class="page__bd">
+    <radio-group class="radio-group" bindchange="radioChange" wx:if="{{questionList[currentQuestionIndex].type == 1}}">
+      <label class="radio my-choosebox" wx:for="{{questionList[currentQuestionIndex].option}}" wx:for-index="key" wx:for-item="value">
+        <radio value="{{key}}" checked="{{questionList[currentQuestionIndex].checked == key}}"/>{{key}}、{{value}}
+      </label>
+    </radio-group>
+    <checkbox-group bindchange="checkboxChange" wx:else>
+      <label class="checkbox my-choosebox" wx:for="{{questionList[currentQuestionIndex].option}}" wx:for-index="key" wx:for-item="value">
+        <checkbox value="{{key}}" checked="{{questionList[currentQuestionIndex].checked && questionList[currentQuestionIndex].checked.includes(key)}}"/>{{key}}、{{value}}
+      </label>
+    </checkbox-group>
+  </view>
+  
+  <view class='page_ft'>
+    <view class='mybutton'>
+      <button bindtap='nextSubmit' wx:if="{{currentQuestionIndex == questionList.length - 1}}">提交</button>
+      <button bindtap='nextQuestion' wx:else>下一题</button>
+      <text bindtap='outTest' class="toindex-btn">退出答题</text>
+    </view>
+  </view>
+</view>

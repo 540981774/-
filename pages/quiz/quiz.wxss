@@ -1,0 +1,35 @@
+/* quiz.wxss */
+.page {
+  padding: 20rpx;
+}
+.page__hd {
+  margin-bottom: 20rpx;
+}
+.page__title {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.page__bd {
+  margin-bottom: 20rpx;
+}
+.radio-group, .checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+.my-choosebox {
+  margin: 10rpx 0;
+}
+.mybutton {
+  display: flex;
+  justify-content: space-between;
+}
+.mybutton button {
+  padding: 10rpx;
+  width: 50%;
+  border: none;
+  border-radius: 10rpx;
+}
+.toindex-btn {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,67 @@
+/* result.wxss */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  height: 100vh;
+}
+.page__hd {
+  text-align: center;
+  margin-top: 40rpx;
+}
+.page__title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.page-score {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 48rpx;
+  color: #ff0000;
+  margin-bottom: 20rpx;
+}
+.score-num {
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #ff0000;
+}
+.score-text {
+  font-size: 48rpx;
+  margin-left: 10rpx;
+}
+.score-remark {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #666;
+}
+.page__ft {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1000rpx;
+}
+.wrong-view {
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.wrong-btns {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.wrong-btn {
+  padding: 5rpx;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5rpx;
+  width: 50%;
+}
+.toindex-btn {
+  color: #1cbbb4;
+  text-decoration: underline;
+  cursor: pointer;
+}
